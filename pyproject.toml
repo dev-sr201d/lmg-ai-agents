@@ -8,3 +8,4 @@ package-mode = false
 
 [tool.poetry.dependencies]
 agent-framework = "^1.0.0b251105"
+azure-keyvault-secrets = "^4.10.0"

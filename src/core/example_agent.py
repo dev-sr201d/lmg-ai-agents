@@ -1,15 +1,17 @@
-from agent_framework import AgentRunResponseUpdate, ChatAgent, AgentThread
+from agent_framework import ChatAgent, AgentThread
 from agent_framework.azure import AzureOpenAIChatClient
 from azure.identity import DefaultAzureCredential
 import json
 from pydantic import Field
 from typing import Annotated
 
+from core.configuration import Configuration
+
 class ExampleAgent1():
-    def __init__(self):
-        self._foundry_endpoint = "https://example-endpoint.openai.azure.com/"
-        self._deployment_name = "example-deployment"
-        self._api_key = ""
+    def __init__(self, configuration: Configuration):
+        self._foundry_endpoint = configuration.foundry_endpoint
+        self._deployment_name = configuration.deployment_name
+        self._api_key = configuration.api_key
 
     def create_agent(self) -> ChatAgent:
         credential = DefaultAzureCredential() if self._api_key is None else None

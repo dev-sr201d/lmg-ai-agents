@@ -1,8 +1,10 @@
+from core.configuration import Configuration
 from core.example_agent import ExampleAgent1
 
 from agent_framework.devui import serve
 
-example_agent = ExampleAgent1()
+configuration = Configuration()
+example_agent = ExampleAgent1(configuration=configuration)
 
 # Launch debug UI - that's it!
 serve(entities=[example_agent.create_agent()], auto_open=True)

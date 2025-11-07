@@ -623,6 +623,23 @@ msal-extensions = ">=1.2.0"
 typing-extensions = ">=4.0.0"
 
 [[package]]
+name = "azure-keyvault-secrets"
+version = "4.10.0"
+description = "Microsoft Corporation Key Vault Secrets Client Library for Python"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "azure_keyvault_secrets-4.10.0-py3-none-any.whl", hash = "sha256:9dbde256077a4ee1a847646671580692e3f9bea36bcfc189c3cf2b9a94eb38b9"},
+    {file = "azure_keyvault_secrets-4.10.0.tar.gz", hash = "sha256:666fa42892f9cee749563e551a90f060435ab878977c95265173a8246d546a36"},
+]
+
+[package.dependencies]
+azure-core = ">=1.31.0"
+isodate = ">=0.6.1"
+typing-extensions = ">=4.6.0"
+
+[[package]]
 name = "azure-storage-blob"
 version = "12.27.1"
 description = "Microsoft Azure Blob Storage Client Library for Python"
@@ -4081,4 +4098,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">= 3.13,<3.14"
-content-hash = "0dbae02a8bafbafa2f6dc302fe98364267ab6783093aa9a04cd603ac9ef5f2f1"
+content-hash = "e3b6e5fd7fae09680c22049a290d9bd236ec0d8aacbce7dd8fe63b80c0ae0e95"
