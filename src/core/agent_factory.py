@@ -41,3 +41,5 @@ class AgentFactory():
     ) -> str:
         """Description of what the tool does."""
         return "something"
+
+# Further tool options see: https://github.com/microsoft/Agent-Framework-Samples/tree/main/04.Tools
